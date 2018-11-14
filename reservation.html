@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reservation</title>
+
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <!--font awesome-->
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.2.0-web/css/all.min.css">
+
+
+</head>
+<body id="reservation">
+<div class="reservation-bg">
+    <div class="form-container">
+        <div class="form-heading">
+            <h1>Reservations</h1>
+            <ul>
+                <li>
+                    welcome to use the online reservation system. After the reservation message is sent, we will have
+                    someone to contact you by phone/text to confirm the success of the reservation.
+                </li>
+                <li>
+                    For bookings of 10+ people/Various celebrations, meetings, marriage proposals, venue rentals, etc...
+                </li>
+                <li>
+                    please call 02-25705508 directly, thank you.
+                </li>
+                <li>
+                    Booking/scheduled deposit transfer to account number: (006) 3133 717 009992
+                </li>
+            </ul>
+        </div>
+
+
+        <form id="myForm" name="myForm" action="" method="post" onsubmit="return validateForm()" >
+            <div class="row">
+                <label class="form-label" for="name"> Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="row">
+                <label class="form-label" for="phone">Phone</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+            <div class="row">
+                <label class="form-label" for="date">Date</label>
+                <input type="date" id="date" name="date" placeholder="mm/dd/yyyy">
+            </div>
+            <div class="row">
+                <label class="form-label" for="time-select">Time</label>
+                <select  id="time-select">
+                    <option value="">--Please choose a time--</option>
+                    <option value="11:30">11:30</option>
+                    <option value="11:45">11:45</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:15">12:15</option>
+                    <option value="12:30">12:30</option>
+                    <option value="12:45">12:45</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:15">13:15</option>
+                    <option value="13:30">13:30</option>
+                    <option value="13:45">13:45</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:15">14:15</option>
+                    <option value="14:30">14:30</option>
+                    <option value="14:45">14:45</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:15">15:15</option>
+                    <option value="15:30">15:30</option>
+                    <option value="15:45">15:45</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:15">16:15</option>
+                    <option value="16:30">16:30</option>
+                    <option value="16:45">16:45</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:15">17:15</option>
+                    <option value="17:30">17:30</option>
+                    <option value="17:45">17:45</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:15">18:15</option>
+                    <option value="18:30">18:30</option>
+                    <option value="18:45">18:45</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:15">19:15</option>
+                    <option value="19:30">19:30</option>
+                    <option value="19:45">19:45</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:15">20:15</option>
+                </select>
+            </div>
+            <div class="row">
+                <label class="form-label" for="guests">Guests</label>
+                <input type="number" id="guests" name="guests" >
+            </div>
+            <input type="submit" form="myForm" value="Submit" class="reservation-btn">
+        </form>
+    </div>
+    <a role="button" class="home-btn" href="index.html">
+        <img src="assets/img/logo.png">
+    </a>
+
+</div>
+
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

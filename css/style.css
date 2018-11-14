@@ -1,0 +1,838 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* RESET CSS END */
+
+/* BASIC SETUP */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: lato, sans-serif;
+}
+
+/* HELPER CLASS */
+.block {
+    display: block;
+}
+
+.theme-color {
+    color: orangered;
+}
+
+.border-left {
+    border-left: 1px solid white;
+    padding-left: 2%;
+}
+
+.padding-right {
+    padding-right: 3%;
+}
+
+.relative {
+    position: relative;
+}
+
+/*-------------------*/
+/*---- HOME PAGE ----*/
+/*-------------------*/
+
+/* REUSABLE COMPONENTS */
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.divider {
+    border-bottom: 1px solid #8ea4b8;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.main-nav {
+    background-color: rgba(53, 53, 53, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: -100%;
+    transition: top 0.8s;
+
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+
+.logo {
+    height: 60px;
+    margin: 0 20px;
+}
+
+.nav-bar li {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.nav-bar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.nav-bar li a:hover {
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid orangered;
+    transition: padding-bottom 0.3s, font-size 0.3s;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/img/hero.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero-info {
+    padding: 280px 0;
+}
+
+.hero-info h1 {
+    color: white;
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+/* SLOGAN */
+
+.intro h2 {
+    color: #555;
+    font-size: 1.7em;
+    line-height: 1.5em;
+    text-align: center;
+    margin: 100px 0 50px 0;
+}
+
+.logo2 {
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+.logo2 img {
+    display: block;
+    margin: 0 auto;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.logo-name {
+    text-align: center;
+    font-size: 2em;
+    color: #555;
+}
+
+.intro address {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+    padding: 50px 0;
+    color: #555;
+}
+
+/* GALLERY */
+
+.meal-showcase {
+    list-style: none;
+    display: flex;
+
+}
+
+.meal-photo {
+    background-color: #000;
+    overflow: hidden;
+}
+
+.meal-photo img {
+    width: 100%;
+    opacity: 0.7;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03)
+}
+
+/* ABOUT */
+
+.about h2 {
+    padding: 50px 0 30px 0;
+    text-align: center;
+    color: #555;
+    font-size: 1.7em;
+}
+
+.about p {
+    width: 80%;
+    margin: 30px auto;
+    color: #555;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.slogan {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    padding: 80px 0;
+}
+
+/* TESTIMONIAL */
+
+.testimonial {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/img/hero2.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.testimonial h2 {
+    font-size: 4em;
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    text-transform: capitalize;
+    padding: 80px 0 25px 0;
+}
+
+.testimonial p {
+    color: white;
+    font-weight: 300;
+}
+
+.container-testimonial {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.col-1-of-3:before {
+    content: "\201C";
+    font-size: 5em;
+    position: relative;
+    left: 5%;
+    color: white;
+    overflow: auto;
+}
+
+.col-1-of-3 {
+    width: 28%;
+    padding: 25px 0 50px 0;
+    line-height: 1.2em;
+}
+
+.col-1-of-3 p {
+    height: 250px;
+}
+
+.col-1-of-3 img {
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 10%;
+    padding: 0 10px;
+}
+
+cite {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* CONTACT AND INFO */
+
+.contact-info h2 {
+    font-size: 2em;
+    line-height: 2em;
+    text-align: center;
+    color: #555;
+    text-transform: capitalize;
+    width: 50%;
+    margin: 20px auto;
+}
+
+/* FOOTER */
+
+.main-footer {
+    background: #353535;
+}
+
+.container-footer {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.main-footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+
+}
+
+.main-footer ul li {
+    text-align: center;
+}
+
+.social-icon {
+    color: orangered;
+    font-size: 2em;
+    line-height: 1.5em;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #353535;
+    border: 1px solid orangered;
+    transition: color 0.5s, border-color 0.5s;
+}
+
+.facebook:hover {
+    color: #3b5998;
+    border-color: #3b5998;
+}
+
+.instagram:hover {
+    color: #517fa4;
+    border-color: #517fa4;
+}
+
+.yelp:hover {
+    color: #af0606;
+    border-color: #af0606;
+}
+
+.copy-right {
+    color: white;
+    text-align: center;
+    background-color: orangered;
+    padding: 10px 0;
+}
+
+/*-------------*/
+/* RESERVATION */
+/*-------------*/
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.reservation-bg {
+    height: 100%;
+    background: url("../assets/img/hero4.jpg") no-repeat center;
+    background-size: cover;
+    overflow: auto;
+    position: relative;
+}
+
+.form-container {
+    margin-top: 50px;
+}
+
+.form-heading {
+    color: white;
+    width: 45%;
+    margin: 0 auto;
+    background: orangered;
+    text-align: center;
+    padding: 20px 20px;
+    line-height: 1.5em;
+}
+
+.form-heading h1 {
+    font-size: 2em;
+    line-height: 2em;
+    text-align: center;
+}
+
+.form-heading ul li {
+    font-weight: 300;
+}
+
+#myForm {
+    color: white;
+    width: 45%;
+    margin: 0 auto;
+    background-color: rgba(100, 100, 100, 0.5);
+    padding: 20px 20px;
+    display: table;
+}
+
+.form-label {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+}
+
+.row input {
+    display: inline-block;
+    width: 70%;
+    margin-bottom: 5px;
+    line-height: 2em;
+    text-align: center;
+}
+
+.row select {
+    width: 70%;
+    margin-Bottom: 5px;
+    height: 3em;
+}
+
+.reservation-btn {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    width: 30%;
+    padding: 10px;
+    font-size: 1.2em;
+    display: block;
+    margin: 0 auto;
+    border-radius: 200px;
+
+}
+
+.reservation-btn:hover {
+    color: orangered;
+    border-color: orangered;
+    transition: 0.3s;
+}
+
+.home-btn {
+    position: absolute;
+    cursor: pointer;
+    right: 40px;
+    bottom: 40px;
+}
+
+.home-btn img {
+    height: 100px;
+    opacity: 0.6;
+}
+
+.home-btn img:hover {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+/*--------------*/
+/*---- MENU ----*/
+/*--------------*/
+
+/* MENU REUSABLE */
+
+.b-style {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.meal-info {
+    text-align: center;
+}
+
+.meal-info h2 {
+    font-size: 3em;
+    text-transform: capitalize;
+    color: #555;
+    padding: 40px 0;
+}
+
+.meal-info p {
+    font-size: 1.5em;
+    color: #555;
+    padding: 40px 0;
+}
+
+.menu-showcase {
+    overflow: auto;
+    display: flex;
+}
+
+.menu-col-1-of-3 {
+    width: 33.33%;
+    text-align: center;
+}
+
+.menu-col-1-of-3 img {
+    width: 80%;
+    border-radius: 2%;
+    transform: scale(0.9);
+    opacity: 0.9;
+}
+
+.menu-col-1-of-3 img:hover {
+    transform: scale(1);
+    border-radius: 10%;
+    transition: transform 0.5s, border-radius 0.5s, opacity 0.5s;
+    border: 0.3em solid orangered;
+    opacity: 1;
+}
+
+.menu-item {
+    text-transform: capitalize;
+    font-size: 1.3em;
+    padding: 20px 0;
+}
+
+.menu-item-info {
+    text-transform: lowercase;
+    width: 100%;
+    padding: 20px 0 40px 0;
+    color: #808080;
+    font-weight: 300;
+    font-size: 1.1em;
+    vertical-align: top;
+}
+
+/* MENU REUSABLE END */
+
+.banner {
+    background: url('../assets/img/hero5.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.banner2 {
+    background: url('../assets/img/soup-salad.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.banner3 {
+    background: url('../assets/img/hero6.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.banner4 {
+    background: url('../assets/img/hero3.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+/*MENU SLIDESHOW*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    width: 60%;
+    height: 100%;
+}
+
+.close {
+    position: absolute;
+    color: white;
+    font-size: 4em;
+    user-select: none;
+    cursor: pointer;
+    right: 0;
+    padding: 2%;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    transition: color 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.slides {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 20px solid white;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: auto;
+    padding: 20px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    color: orangered;
+}
+
+/*-----------------*/
+/*---- QUERIES ----*/
+/*-----------------*/
+
+@media only screen and (max-width: 767px) {
+
+    /*BURGER NAV*/
+
+    .mobile-nav {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 48px;
+        height: 5px;
+        background-color: white;
+        margin: 10px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: rotate(-45deg) translate(-14px, 6px);
+    }
+
+    .change .bar2 {opacity: 0;}
+
+    .change .bar3 {
+        transform: rotate(45deg) translate(-14px, -8px);
+    }
+
+
+    .container-nav {
+        justify-content: space-between;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-bar li {
+        display: block;
+        text-align: right;
+    }
+
+
+
+    /*INDEX PAGE*/
+
+    .hero-info h1 {
+        font-size: 2.2em;
+        padding: 20px;
+    }
+
+    .intro h2 {
+        padding: 0 40px;
+    }
+
+    .intro address {
+        margin: 0 20px;
+    }
+
+    .meal-showcase {
+        list-style: none;
+        display: block;
+    }
+
+    .menu-col-1-of-3 {
+        width: 100%;
+    }
+
+    .container-testimonial {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .col-1-of-3 {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .col-1-of-3 img {
+        margin: 20px;
+    }
+
+    .col-1-of-3 p {
+        height: auto;
+    }
+
+    .social-icon {
+        font-size: 2.5em;
+        line-height: 1.5em;
+        height: 60px;
+        width: 60px;
+    }
+
+
+
+    /*MENU PAGE*/
+
+    .menu-showcase {
+        display: block;
+    }
+
+    .menu-col-1-of-3 {
+        width: 100%;
+    }
+
+
+
+    /*RESERVATION*/
+    .form-container {
+        margin-top: 10px;
+    }
+
+    .form-heading {
+        width: 85%;
+        padding: 10px 10px;
+        line-height: 1.3em;
+    }
+
+    .form-heading h1 {
+        font-size: 1.3em;
+        line-height: 1.3em;
+    }
+
+
+    #myForm {
+        width: 85%;
+        padding: 10px 10px;
+    }
+
+    .form-label {
+        width: 25%;
+    }
+
+    .row input {
+        width: 65%;
+    }
+
+    .row select {
+        width: 65%;
+    }
+
+    .reservation-btn {
+        width: 60%;
+        margin: 10px auto;
+    }
+
+
+    .home-btn {
+        display: block;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        padding: 20px 37%;
+    }
+}
+
+
+
